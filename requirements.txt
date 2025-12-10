@@ -1,6 +1,6 @@
 # Core MONAI Ecosystem
 monai>=1.4.0
-monai-label>=0.5.0
+# monai-label - Install separately: pip install monailabel (not on PyPI)
 
 # DICOM Processing
 pydicom>=2.4.0
@@ -8,7 +8,7 @@ SimpleITK>=2.3.0
 nibabel>=5.1.0
 
 # Data Organization
-bids-validator>=1.13.0
+# bids-validator - Install separately: npm install -g bids-validator (Node.js tool)
 
 # Multimodal & AI
 transformers>=4.35.0
@@ -25,25 +25,21 @@ pyyaml>=6.0
 
 # Visualization
 matplotlib>=3.7.0
-itkwidgets>=0.33.0
 plotly>=5.17.0
+# itkwidgets>=0.33.0  # Optional: for Jupyter notebook 3D visualization
 
 # Utilities
 tqdm>=4.66.0
 requests>=2.31.0
 einops>=0.7.0  # Required for SwinUNETR
 
-# Testing
-pytest>=7.4.0
-pytest-cov>=4.1.0  # For coverage reporting
-
 # Frontend
 streamlit>=1.28.0
 
-# Optional: For dataset downloads
-google-cloud-storage>=2.10.0  # For IDC
-nbia-client>=1.0.0  # For TCIA (if available)
-
 # Cloud Inference (Optional)
-modal>=0.64.0  # Modal Labs serverless GPU
+# modal>=0.64.0  # Install separately if using Modal cloud GPU
+
+# Testing (Optional - not needed for deployment)
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
 
