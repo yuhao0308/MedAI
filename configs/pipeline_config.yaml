@@ -1,0 +1,97 @@
+# MONAI Medical Imaging AI Pipeline Configuration
+# 2025 Standard Configuration
+
+# Dataset Configuration
+dataset:
+  bids_root: "./data/bids_dataset"
+  raw_dicom_dir: "./data/raw_dicom"
+  derivatives_dir: "./data/derivatives"
+  
+# Preprocessing Configuration
+preprocessing:
+  spacing: [1.5, 1.5, 1.5]  # Target voxel spacing in mm (x, y, z)
+  orientation: "RAS"  # Target anatomical orientation
+  intensity_range: [-1000.0, 1000.0]  # Source intensity range (for CT: Hounsfield Units)
+  target_range: [0.0, 1.0]  # Normalized target range
+  
+# Training Configuration
+training:
+  spatial_size: [96, 96, 96]  # Patch size for training
+  batch_size: 1
+  num_epochs: 100
+  learning_rate: 0.0001
+  num_workers: 4
+  cache_type: "memory"  # "memory", "disk", or "none"
+  cache_dir: "./data/cache"
+  
+  # Data augmentation
+  augmentation:
+    prob: 0.1  # Probability of applying augmentations
+    pos_neg_ratio: 1  # Positive to negative patch ratio
+    num_samples: 4  # Number of patches per volume
+  
+  # Train/Val/Test split
+  split:
+    train_ratio: 0.7
+    val_ratio: 0.15
+    test_ratio: 0.15
+    random_seed: 42
+
+# Model Configuration
+model:
+  type: "SwinUNETR"  # "SwinUNETR" or "SegResNet"
+  in_channels: 1
+  out_channels: 2  # Background + foreground
+  img_size: [96, 96, 96]
+  
+# Loss Function
+loss:
+  type: "DiceCELoss"  # "DiceCELoss" or "DiceFocalLoss"
+  to_onehot_y: true
+  softmax: true
+
+# Inference Configuration
+inference:
+  roi_size: [96, 96, 96]  # Patch size for sliding window
+  sw_batch_size: 4
+  overlap: 0.25  # Overlap ratio between patches
+
+# Uncertainty Quantification
+uncertainty:
+  enabled: true
+  method: "monte_carlo_dropout"
+  num_passes: 20  # Number of MC Dropout passes
+
+# Auto3DSeg Configuration
+auto3dseg:
+  enabled: false  # Set to true to use Auto3DSeg instead of custom training
+  num_fold: 5  # Cross-validation folds
+  output_dir: "./data/auto3dseg_output"
+
+# MONAI Label Configuration
+monai_label:
+  enabled: true
+  port: 8000
+  host: "0.0.0.0"
+  model: "VISTA-3D"  # Foundation model for annotation
+
+# Multimodal Configuration
+multimodal:
+  enabled: true
+  ehr_data_path: null  # Path to EHR data (CSV/TSV/JSON)
+  clinical_notes_path: null  # Path to clinical notes (JSON)
+  vlm_model: null  # Vision-Language Model identifier
+
+# Output Configuration
+output:
+  model_save_dir: "./models"
+  predictions_dir: "./data/derivatives/predictions"
+  reports_dir: "./reports"
+  visualizations_dir: "./visualizations"
+
+# Logging
+logging:
+  level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR"
+  log_dir: "./logs"
+
+

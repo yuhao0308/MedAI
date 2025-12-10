@@ -1,0 +1,49 @@
+# Data directories (38K+ DICOM files)
+data/
+MyHead/
+New_thorax_ct_dicom/
+*.dcm
+*.nii
+*.nii.gz
+*.mhd
+*.raw
+bids_dataset.zip
+
+# Model weights (large binary files)
+models/**/*.pth
+models/**/*.pt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.env
+
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log

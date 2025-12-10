@@ -1,0 +1,81 @@
+auto3dseg:
+  enabled: false
+  num_fold: 5
+  output_dir: ./data/auto3dseg_output
+dataset:
+  bids_root: ./data/bids_dataset
+  derivatives_dir: ./data/derivatives
+  raw_dicom_dir: ./data/raw_dicom
+inference:
+  overlap: 0.25
+  roi_size:
+  - 96
+  - 96
+  - 96
+  sw_batch_size: 4
+logging:
+  level: INFO
+  log_dir: ./logs
+loss:
+  softmax: true
+  to_onehot_y: true
+  type: DiceCELoss
+model:
+  img_size:
+  - 96
+  - 96
+  - 96
+  in_channels: 1
+  out_channels: 2
+  type: SwinUNETR
+monai_label:
+  enabled: true
+  host: 0.0.0.0
+  model: VISTA-3D
+  port: 8000
+multimodal:
+  clinical_notes_path: null
+  ehr_data_path: null
+  enabled: true
+  vlm_model: null
+output:
+  model_save_dir: ./models
+  predictions_dir: ./data/derivatives/predictions
+  reports_dir: ./reports
+  visualizations_dir: ./visualizations
+preprocessing:
+  intensity_range:
+  - -1000.0
+  - 1000.0
+  orientation: RAS
+  spacing:
+  - 1.5
+  - 1.5
+  - 1.5
+  target_range:
+  - 0.0
+  - 1.0
+training:
+  augmentation:
+    num_samples: 4
+    pos_neg_ratio: 1
+    prob: 0.1
+  batch_size: 1
+  cache_dir: ./data/cache
+  cache_type: memory
+  learning_rate: 0.0001
+  num_epochs: 1
+  num_workers: 4
+  spatial_size:
+  - 96
+  - 96
+  - 96
+  split:
+    random_seed: 42
+    test_ratio: 0.15
+    train_ratio: 0.7
+    val_ratio: 0.15
+uncertainty:
+  enabled: true
+  method: monte_carlo_dropout
+  num_passes: 20

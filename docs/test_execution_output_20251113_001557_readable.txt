@@ -1,0 +1,284 @@
+================================================================================
+FULL PIPELINE EXECUTION REPORT
+================================================================================
+
+Command: /Library/Developer/CommandLineTools/usr/bin/python3 /Users/yuhaowang/Documents/Itlize/MedAI/scripts/run_pipeline.py full --config configs/pipeline_config.yaml
+Start Time: 2025-11-13T00:15:57.224871
+End Time: 2025-11-13T00:24:34.403552
+Duration: 517.18 seconds
+Return Code: 1
+Success: False
+
+================================================================================
+STDOUT
+================================================================================
+
+
+================================================================================
+BIDS DATASET VALIDATION REPORT
+================================================================================
+
+Dataset: data/bids_dataset
+Status: ✓ VALID
+
+--- Dataset Summary ---
+Subjects: 50
+Images: 50
+Labels: 650
+Common Image Shape: (512, 512, 55)
+Common Spacing: (np.float32(0.703125), np.float32(0.703125), np.float32(5.0)) mm
+Intensity Range: (0.0, 4095.0)
+
+--- ERRORS ---
+None ✓
+
+--- WARNINGS (118) ---
+1. sub-021: Z-dimension differs - Image 60 vs Label 13 slices (sub-021_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+2. sub-026: Z-dimension differs - Image 51 vs Label 12 slices (sub-026_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+3. sub-019: Z-dimension differs - Image 61 vs Label 12 slices (sub-019_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+4. sub-010: Z-dimension differs - Image 46 vs Label 13 slices (sub-010_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+5. sub-017: Z-dimension differs - Image 66 vs Label 13 slices (sub-017_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+6. sub-028: Z-dimension differs - Image 64 vs Label 12 slices (sub-028_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+7. sub-043: Z-dimension differs - Image 60 vs Label 58 slices (sub-043_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+8. sub-043: Z-dimension differs - Image 60 vs Label 56 slices (sub-043_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+9. sub-043: Z-dimension differs - Image 60 vs Label 18 slices (sub-043_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+10. sub-043: Z-dimension differs - Image 60 vs Label 58 slices (sub-043_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+11. sub-043: Z-dimension differs - Image 60 vs Label 55 slices (sub-043_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+12. sub-043: Z-dimension differs - Image 60 vs Label 57 slices (sub-043_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+13. sub-043: Z-dimension differs - Image 60 vs Label 40 slices (sub-043_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+14. sub-044: Z-dimension differs - Image 52 vs Label 33 slices (sub-044_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+15. sub-044: Z-dimension differs - Image 52 vs Label 45 slices (sub-044_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+16. sub-044: Z-dimension differs - Image 52 vs Label 49 slices (sub-044_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+17. sub-044: Z-dimension differs - Image 52 vs Label 47 slices (sub-044_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+18. sub-044: Z-dimension differs - Image 52 vs Label 49 slices (sub-044_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+19. sub-044: Z-dimension differs - Image 52 vs Label 48 slices (sub-044_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+20. sub-044: Z-dimension differs - Image 52 vs Label 15 slices (sub-044_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+21. sub-016: Z-dimension differs - Image 55 vs Label 12 slices (sub-016_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+22. sub-029: Z-dimension differs - Image 63 vs Label 16 slices (sub-029_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+23. sub-011: Z-dimension differs - Image 60 vs Label 11 slices (sub-011_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+24. sub-027: Z-dimension differs - Image 59 vs Label 12 slices (sub-027_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+25. sub-018: Z-dimension differs - Image 55 vs Label 16 slices (sub-018_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+26. sub-020: Z-dimension differs - Image 56 vs Label 12 slices (sub-020_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+27. sub-045: Z-dimension differs - Image 62 vs Label 59 slices (sub-045_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+28. sub-045: Z-dimension differs - Image 62 vs Label 57 slices (sub-045_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+29. sub-045: Z-dimension differs - Image 62 vs Label 15 slices (sub-045_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+30. sub-045: Z-dimension differs - Image 62 vs Label 36 slices (sub-045_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+31. sub-045: Z-dimension differs - Image 62 vs Label 55 slices (sub-045_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+32. sub-045: Z-dimension differs - Image 62 vs Label 59 slices (sub-045_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+33. sub-042: Z-dimension differs - Image 53 vs Label 14 slices (sub-042_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+34. sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+35. sub-042: Z-dimension differs - Image 53 vs Label 32 slices (sub-042_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+36. sub-042: Z-dimension differs - Image 53 vs Label 51 slices (sub-042_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+37. sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+38. sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+39. sub-042: Z-dimension differs - Image 53 vs Label 52 slices (sub-042_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+40. sub-002: Z-dimension differs - Image 66 vs Label 18 slices (sub-002_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+41. sub-005: Z-dimension differs - Image 53 vs Label 15 slices (sub-005_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+42. sub-033: Z-dimension differs - Image 61 vs Label 16 slices (sub-033_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+43. sub-033: Z-dimension differs - Image 61 vs Label 57 slices (sub-033_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+44. sub-033: Z-dimension differs - Image 61 vs Label 60 slices (sub-033_CT_seg-T-Es_mask.nii.gz) - This is normal for organ-specific masks
+45. sub-033: Z-dimension differs - Image 61 vs Label 32 slices (sub-033_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+46. sub-034: Z-dimension differs - Image 63 vs Label 37 slices (sub-034_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+47. sub-034: Z-dimension differs - Image 63 vs Label 53 slices (sub-034_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+48. sub-050: Z-dimension differs - Image 45 vs Label 9 slices (sub-050_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+49. sub-050: Z-dimension differs - Image 45 vs Label 27 slices (sub-050_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+50. sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+51. sub-050: Z-dimension differs - Image 45 vs Label 39 slices (sub-050_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+52. sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+53. sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+54. sub-050: Z-dimension differs - Image 45 vs Label 41 slices (sub-050_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+55. sub-035: Z-dimension differs - Image 55 vs Label 29 slices (sub-035_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+56. sub-035: Z-dimension differs - Image 55 vs Label 16 slices (sub-035_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+57. sub-032: Z-dimension differs - Image 60 vs Label 16 slices (sub-032_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+58. sub-032: Z-dimension differs - Image 60 vs Label 34 slices (sub-032_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+59. sub-032: Z-dimension differs - Image 60 vs Label 54 slices (sub-032_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+60. sub-004: Z-dimension differs - Image 47 vs Label 12 slices (sub-004_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+61. sub-003: Z-dimension differs - Image 64 vs Label 21 slices (sub-003_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+62. sub-047: Z-dimension differs - Image 53 vs Label 51 slices (sub-047_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+63. sub-047: Z-dimension differs - Image 53 vs Label 51 slices (sub-047_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+64. sub-047: Z-dimension differs - Image 53 vs Label 13 slices (sub-047_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+65. sub-047: Z-dimension differs - Image 53 vs Label 45 slices (sub-047_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+66. sub-047: Z-dimension differs - Image 53 vs Label 49 slices (sub-047_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+67. sub-047: Z-dimension differs - Image 53 vs Label 30 slices (sub-047_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+68. sub-047: Z-dimension differs - Image 53 vs Label 50 slices (sub-047_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+69. sub-040: Z-dimension differs - Image 48 vs Label 27 slices (sub-040_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+70. sub-040: Z-dimension differs - Image 48 vs Label 9 slices (sub-040_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+71. sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+72. sub-049: Z-dimension differs - Image 55 vs Label 51 slices (sub-049_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+73. sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+74. sub-049: Z-dimension differs - Image 55 vs Label 13 slices (sub-049_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+75. sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+76. sub-049: Z-dimension differs - Image 55 vs Label 49 slices (sub-049_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+77. sub-049: Z-dimension differs - Image 55 vs Label 31 slices (sub-049_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+78. sub-025: Z-dimension differs - Image 51 vs Label 12 slices (sub-025_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+79. sub-022: Z-dimension differs - Image 56 vs Label 16 slices (sub-022_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+80. sub-014: Z-dimension differs - Image 65 vs Label 17 slices (sub-014_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+81. sub-013: Z-dimension differs - Image 64 vs Label 16 slices (sub-013_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+82. sub-048: Z-dimension differs - Image 56 vs Label 31 slices (sub-048_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+83. sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+84. sub-048: Z-dimension differs - Image 56 vs Label 52 slices (sub-048_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+85. sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+86. sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+87. sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+88. sub-048: Z-dimension differs - Image 56 vs Label 15 slices (sub-048_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+89. sub-041: Z-dimension differs - Image 51 vs Label 16 slices (sub-041_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+90. sub-041: Z-dimension differs - Image 51 vs Label 33 slices (sub-041_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+91. sub-046: Z-dimension differs - Image 62 vs Label 42 slices (sub-046_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+92. sub-046: Z-dimension differs - Image 62 vs Label 21 slices (sub-046_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+93. sub-046: Z-dimension differs - Image 62 vs Label 58 slices (sub-046_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+94. sub-046: Z-dimension differs - Image 62 vs Label 58 slices (sub-046_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks
+95. sub-046: Z-dimension differs - Image 62 vs Label 59 slices (sub-046_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks
+96. sub-046: Z-dimension differs - Image 62 vs Label 57 slices (sub-046_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks
+97. sub-046: Z-dimension differs - Image 62 vs Label 59 slices (sub-046_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks
+98. sub-012: Z-dimension differs - Image 66 vs Label 13 slices (sub-012_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+99. sub-015: Z-dimension differs - Image 58 vs Label 12 slices (sub-015_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+100. sub-023: Z-dimension differs - Image 64 vs Label 11 slices (sub-023_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+101. sub-024: Z-dimension differs - Image 63 vs Label 16 slices (sub-024_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+102. sub-039: Z-dimension differs - Image 52 vs Label 16 slices (sub-039_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+103. sub-039: Z-dimension differs - Image 52 vs Label 25 slices (sub-039_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+104. sub-006: Z-dimension differs - Image 55 vs Label 14 slices (sub-006_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+105. sub-001: Z-dimension differs - Image 58 vs Label 16 slices (sub-001_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+106. sub-008: Z-dimension differs - Image 58 vs Label 12 slices (sub-008_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+107. sub-037: Z-dimension differs - Image 57 vs Label 15 slices (sub-037_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+108. sub-037: Z-dimension differs - Image 57 vs Label 31 slices (sub-037_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+109. sub-030: Z-dimension differs - Image 62 vs Label 11 slices (sub-030_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+110. sub-031: Z-dimension differs - Image 54 vs Label 15 slices (sub-031_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+111. sub-031: Z-dimension differs - Image 54 vs Label 51 slices (sub-031_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks
+112. sub-031: Z-dimension differs - Image 54 vs Label 31 slices (sub-031_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+113. sub-009: Z-dimension differs - Image 67 vs Label 14 slices (sub-009_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+114. sub-036: Z-dimension differs - Image 68 vs Label 16 slices (sub-036_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+115. sub-036: Z-dimension differs - Image 68 vs Label 39 slices (sub-036_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+116. sub-038: Z-dimension differs - Image 64 vs Label 39 slices (sub-038_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks
+117. sub-038: Z-dimension differs - Image 64 vs Label 16 slices (sub-038_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+118. sub-007: Z-dimension differs - Image 61 vs Label 13 slices (sub-007_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks
+
+--- Structure Details ---
+Valid Subjects: 50
+Subjects with Images: 50
+Subjects with Labels: 50
+
+================================================================================
+
+
+================================================================================
+STDERR
+================================================================================
+
+2025-11-13 00:15:57,245 - __main__ - INFO - ================================================================================
+2025-11-13 00:15:57,245 - __main__ - INFO - Running Full Pipeline
+2025-11-13 00:15:57,245 - __main__ - INFO - ================================================================================
+2025-11-13 00:15:57,258 - __main__ - INFO - 
+================================================================================
+2025-11-13 00:15:57,258 - __main__ - INFO - STEP 1: Validation
+2025-11-13 00:15:57,258 - __main__ - INFO - ================================================================================
+2025-11-13 00:15:57,258 - __main__ - INFO - Running: BIDS Validation
+2025-11-13 00:15:57,258 - __main__ - INFO - Command: /Library/Developer/CommandLineTools/usr/bin/python3 /Users/yuhaowang/Documents/Itlize/MedAI/scripts/validate_bids.py ./data/bids_dataset --output models/validation_report.json
+/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+2025-11-13 00:15:57,436 - __main__ - INFO - Validating BIDS dataset: data/bids_dataset
+2025-11-13 00:15:57,436 - src.ingestion.validation - INFO - Running BIDS structure validation...
+2025-11-13 00:15:57,440 - src.ingestion.validation - INFO - Running NIfTI file validation...
+2025-11-13 00:17:21,713 - src.ingestion.validation - INFO - Running data consistency checks...
+2025-11-13 00:17:35,662 - src.ingestion.validation - INFO - Generating data summary...
+2025-11-13 00:18:37,604 - __main__ - INFO - Saved validation report to models/validation_report.json
+2025-11-13 00:18:37,634 - __main__ - INFO - ✓ BIDS Validation completed successfully
+2025-11-13 00:18:37,634 - __main__ - INFO - 
+================================================================================
+2025-11-13 00:18:37,635 - __main__ - INFO - STEP 2: Training
+2025-11-13 00:18:37,635 - __main__ - INFO - ================================================================================
+2025-11-13 00:18:37,635 - __main__ - INFO - Running: Model Training
+2025-11-13 00:18:37,635 - __main__ - INFO - Command: /Library/Developer/CommandLineTools/usr/bin/python3 /Users/yuhaowang/Documents/Itlize/MedAI/scripts/train_model.py --config configs/pipeline_config.yaml
+/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+2025-11-13 00:18:39,867 - __main__ - WARNING - CUDA not available, using CPU (training will be slow)
+2025-11-13 00:18:39,869 - __main__ - INFO - Saved training config to models/training_config.yaml
+2025-11-13 00:18:39,869 - __main__ - INFO - Preparing datasets...
+2025-11-13 00:18:39,869 - __main__ - INFO - Reading BIDS dataset from ./data/bids_dataset
+2025-11-13 00:18:39,876 - src.preprocessing.dataloader - INFO - Found 50 image-label pairs in BIDS dataset
+2025-11-13 00:18:39,876 - __main__ - INFO - Found 50 image-label pairs for training
+2025-11-13 00:18:39,876 - src.preprocessing.dataloader - INFO - Dataset split: train=35, val=7, test=8
+/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.transforms.spatial.dictionary Orientationd.__init__:labels: Current default value of argument `labels=(('L', 'R'), ('P', 'A'), ('I', 'S'))` was changed in version None from `labels=(('L', 'R'), ('P', 'A'), ('I', 'S'))` to `labels=None`. Default value changed to None meaning that the transform now uses the 'space' of a meta-tensor, if applicable, to determine appropriate axis labels.
+  warn_deprecated(argname, msg, warning_category)
+
+Loading dataset:   0%|          | 0/35 [00:00<?, ?it/s]
+Loading dataset:   3%|▎         | 1/35 [00:01<00:53,  1.57s/it]
+Loading dataset:  14%|█▍        | 5/35 [00:02<00:14,  2.03it/s]
+Loading dataset:  23%|██▎       | 8/35 [00:02<00:07,  3.60it/s]
+Loading dataset:  29%|██▊       | 10/35 [00:04<00:09,  2.50it/s]
+Loading dataset:  37%|███▋      | 13/35 [00:04<00:05,  3.68it/s]
+Loading dataset:  40%|████      | 14/35 [00:05<00:08,  2.60it/s]
+Loading dataset:  46%|████▌     | 16/35 [00:06<00:07,  2.40it/s]
+Loading dataset:  51%|█████▏    | 18/35 [00:07<00:07,  2.20it/s]
+Loading dataset:  57%|█████▋    | 20/35 [00:07<00:05,  2.60it/s]
+Loading dataset:  63%|██████▎   | 22/35 [00:08<00:05,  2.56it/s]
+Loading dataset:  66%|██████▌   | 23/35 [00:08<00:04,  2.89it/s]
+Loading dataset:  69%|██████▊   | 24/35 [00:09<00:04,  2.26it/s]
+Loading dataset:  74%|███████▍  | 26/35 [00:11<00:04,  1.93it/s]
+Loading dataset:  80%|████████  | 28/35 [00:11<00:02,  2.73it/s]
+Loading dataset:  83%|████████▎ | 29/35 [00:11<00:01,  3.07it/s]
+Loading dataset:  86%|████████▌ | 30/35 [00:11<00:01,  2.55it/s]
+Loading dataset:  89%|████████▊ | 31/35 [00:12<00:01,  2.62it/s]
+Loading dataset:  97%|█████████▋| 34/35 [00:12<00:00,  3.62it/s]
+Loading dataset: 100%|██████████| 35/35 [00:12<00:00,  2.72it/s]
+2025-11-13 00:18:52,759 - src.preprocessing.dataloader - INFO - Created CacheDataset (RAM caching)
+
+Loading dataset:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading dataset:  14%|█▍        | 1/7 [00:01<00:08,  1.45s/it]
+Loading dataset:  71%|███████▏  | 5/7 [00:02<00:01,  1.88it/s]
+Loading dataset:  86%|████████▌ | 6/7 [00:03<00:00,  2.28it/s]
+Loading dataset: 100%|██████████| 7/7 [00:03<00:00,  2.66it/s]
+Loading dataset: 100%|██████████| 7/7 [00:03<00:00,  2.15it/s]
+2025-11-13 00:18:56,017 - src.preprocessing.dataloader - INFO - Created CacheDataset (RAM caching)
+2025-11-13 00:18:56,017 - __main__ - INFO - Creating SwinUNETR model...
+2025-11-13 00:18:56,052 - src.modeling.trainer - INFO - Created SwinUNETR model
+2025-11-13 00:18:56,052 - __main__ - INFO - Model parameters: 15,703,004 total, 15,703,004 trainable
+2025-11-13 00:18:56,052 - __main__ - INFO - Starting training...
+2025-11-13 00:18:56,054 - src.modeling.trainer - INFO - Epoch 1/100
+/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/yuhaowang/Documents/Itlize/MedAI/scripts/train_model.py", line 271, in <module>
+    main()
+  File "/Users/yuhaowang/Documents/Itlize/MedAI/scripts/train_model.py", line 238, in main
+    history = train_model(
+  File "/Users/yuhaowang/Documents/Itlize/MedAI/src/modeling/trainer.py", line 187, in train_model
+    train_loss = train_epoch(
+  File "/Users/yuhaowang/Documents/Itlize/MedAI/src/modeling/trainer.py", line 94, in train_epoch
+    loss = loss_fn(outputs, labels)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/monai/losses/dice.py", line 803, in forward
+    dice_loss = self.dice(input, target)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/monai/losses/dice.py", line 171, in forward
+    target = one_hot(target, num_classes=n_pred_ch)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/monai/networks/utils.py", line 218, in one_hot
+    labels = o.scatter_(dim=dim, index=labels.long(), value=1)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/monai/data/meta_tensor.py", line 283, in __torch_function__
+    ret = super().__torch_function__(func, types, args, kwargs)
+  File "/Users/yuhaowang/Library/Python/3.9/lib/python/site-packages/torch/_tensor.py", line 1669, in __torch_function__
+    ret = func(*args, **kwargs)
+RuntimeError: index 255 is out of bounds for dimension 1 with size 2
+2025-11-13 00:24:32,347 - __main__ - ERROR - ✗ Model Training failed with exit code 1
+2025-11-13 00:24:32,350 - __main__ - ERROR - Training failed.
+2025-11-13 00:24:32,350 - __main__ - INFO - 
+================================================================================
+2025-11-13 00:24:32,350 - __main__ - INFO - STEP 3: Inference
+2025-11-13 00:24:32,350 - __main__ - INFO - ================================================================================
+2025-11-13 00:24:32,353 - __main__ - ERROR - Model checkpoint not found: models/best_model.pth
+2025-11-13 00:24:32,353 - __main__ - INFO - 
+================================================================================
+2025-11-13 00:24:32,353 - __main__ - INFO - Pipeline Summary
+2025-11-13 00:24:32,353 - __main__ - INFO - ================================================================================
+2025-11-13 00:24:32,353 - __main__ - ERROR - ✗ Pipeline completed with errors

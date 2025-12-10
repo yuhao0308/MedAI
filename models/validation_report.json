@@ -1,0 +1,2396 @@
+{
+  "bids_root": "data/bids_dataset",
+  "valid": true,
+  "structure_validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "summary": {
+      "num_subjects": 50,
+      "valid_subjects": 50,
+      "subjects_with_images": 50,
+      "subjects_with_labels": 50
+    }
+  },
+  "nifti_validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "file_stats": [
+      {
+        "file": "sub-021/anat/sub-021_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          60
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.86914",
+          "0.86914",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-026/anat/sub-026_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          51
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.742188",
+          "0.742188",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-019/anat/sub-019_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          61
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.623047",
+          "0.623047",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-010/anat/sub-010_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          46
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.925781",
+          "0.925781",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-017/anat/sub-017_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          66
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.761719",
+          "0.761719",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-028/anat/sub-028_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          64
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.839844",
+          "0.839844",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-043/anat/sub-043_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          60
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.703125",
+          "0.703125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-044/anat/sub-044_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          52
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.921875",
+          "0.921875",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-016/anat/sub-016_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          55
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.828125",
+          "0.828125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-029/anat/sub-029_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          63
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.742188",
+          "0.742188",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-011/anat/sub-011_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          60
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.806641",
+          "0.806641",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-027/anat/sub-027_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          59
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.804688",
+          "0.804688",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-018/anat/sub-018_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          55
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.703125",
+          "0.703125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-020/anat/sub-020_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          56
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.826172",
+          "0.826172",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-045/anat/sub-045_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          62
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.878906",
+          "0.878906",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-042/anat/sub-042_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          53
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.882812",
+          "0.882812",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-002/anat/sub-002_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          66
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.892578",
+          "0.892578",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-005/anat/sub-005_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          53
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.703125",
+          "0.703125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-033/anat/sub-033_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          61
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.791016",
+          "0.791016",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-034/anat/sub-034_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          63
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.675781",
+          "0.675781",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-050/anat/sub-050_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          45
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.847656",
+          "0.847656",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-035/anat/sub-035_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          55
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.664062",
+          "0.664062",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-032/anat/sub-032_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          60
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.863281",
+          "0.863281",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-004/anat/sub-004_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          47
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.777344",
+          "0.777344",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-003/anat/sub-003_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          64
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.859375",
+          "0.859375",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-047/anat/sub-047_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          53
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.8125",
+          "0.8125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-040/anat/sub-040_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          48
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.703125",
+          "0.703125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-049/anat/sub-049_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          55
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.763672",
+          "0.763672",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-025/anat/sub-025_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          51
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.875",
+          "0.875",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-022/anat/sub-022_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          56
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.742188",
+          "0.742188",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-014/anat/sub-014_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          65
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.734375",
+          "0.734375",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-013/anat/sub-013_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          64
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.755859",
+          "0.755859",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-048/anat/sub-048_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          56
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.644531",
+          "0.644531",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-041/anat/sub-041_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          51
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.902344",
+          "0.902344",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-046/anat/sub-046_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          62
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.964844",
+          "0.964844",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-012/anat/sub-012_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          66
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.78125",
+          "0.78125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-015/anat/sub-015_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          58
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.742188",
+          "0.742188",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-023/anat/sub-023_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          64
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.820312",
+          "0.820312",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-024/anat/sub-024_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          63
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.859375",
+          "0.859375",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-039/anat/sub-039_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          52
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.830078",
+          "0.830078",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-006/anat/sub-006_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          55
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.861328",
+          "0.861328",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-001/anat/sub-001_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          58
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.773438",
+          "0.773438",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-008/anat/sub-008_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          58
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.703125",
+          "0.703125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-037/anat/sub-037_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          57
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.742188",
+          "0.742188",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-030/anat/sub-030_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          62
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.71875",
+          "0.71875",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-031/anat/sub-031_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          54
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.703125",
+          "0.703125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-009/anat/sub-009_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          67
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.703125",
+          "0.703125",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-036/anat/sub-036_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          68
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.751953",
+          "0.751953",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-038/anat/sub-038_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          64
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.839844",
+          "0.839844",
+          "5.0"
+        ],
+        "valid": true
+      },
+      {
+        "file": "sub-007/anat/sub-007_CT.nii.gz",
+        "shape": [
+          512,
+          512,
+          61
+        ],
+        "dtype": "float64",
+        "spacing": [
+          "0.695312",
+          "0.695312",
+          "5.0"
+        ],
+        "valid": true
+      }
+    ]
+  },
+  "consistency_validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "sub-021: Z-dimension differs - Image 60 vs Label 13 slices (sub-021_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-026: Z-dimension differs - Image 51 vs Label 12 slices (sub-026_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-019: Z-dimension differs - Image 61 vs Label 12 slices (sub-019_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-010: Z-dimension differs - Image 46 vs Label 13 slices (sub-010_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-017: Z-dimension differs - Image 66 vs Label 13 slices (sub-017_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-028: Z-dimension differs - Image 64 vs Label 12 slices (sub-028_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-043: Z-dimension differs - Image 60 vs Label 58 slices (sub-043_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-043: Z-dimension differs - Image 60 vs Label 56 slices (sub-043_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-043: Z-dimension differs - Image 60 vs Label 18 slices (sub-043_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-043: Z-dimension differs - Image 60 vs Label 58 slices (sub-043_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-043: Z-dimension differs - Image 60 vs Label 55 slices (sub-043_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-043: Z-dimension differs - Image 60 vs Label 57 slices (sub-043_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-043: Z-dimension differs - Image 60 vs Label 40 slices (sub-043_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-044: Z-dimension differs - Image 52 vs Label 33 slices (sub-044_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-044: Z-dimension differs - Image 52 vs Label 45 slices (sub-044_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-044: Z-dimension differs - Image 52 vs Label 49 slices (sub-044_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-044: Z-dimension differs - Image 52 vs Label 47 slices (sub-044_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-044: Z-dimension differs - Image 52 vs Label 49 slices (sub-044_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-044: Z-dimension differs - Image 52 vs Label 48 slices (sub-044_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-044: Z-dimension differs - Image 52 vs Label 15 slices (sub-044_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-016: Z-dimension differs - Image 55 vs Label 12 slices (sub-016_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-029: Z-dimension differs - Image 63 vs Label 16 slices (sub-029_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-011: Z-dimension differs - Image 60 vs Label 11 slices (sub-011_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-027: Z-dimension differs - Image 59 vs Label 12 slices (sub-027_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-018: Z-dimension differs - Image 55 vs Label 16 slices (sub-018_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-020: Z-dimension differs - Image 56 vs Label 12 slices (sub-020_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-045: Z-dimension differs - Image 62 vs Label 59 slices (sub-045_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-045: Z-dimension differs - Image 62 vs Label 57 slices (sub-045_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-045: Z-dimension differs - Image 62 vs Label 15 slices (sub-045_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-045: Z-dimension differs - Image 62 vs Label 36 slices (sub-045_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-045: Z-dimension differs - Image 62 vs Label 55 slices (sub-045_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-045: Z-dimension differs - Image 62 vs Label 59 slices (sub-045_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-042: Z-dimension differs - Image 53 vs Label 14 slices (sub-042_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-042: Z-dimension differs - Image 53 vs Label 32 slices (sub-042_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-042: Z-dimension differs - Image 53 vs Label 51 slices (sub-042_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-042: Z-dimension differs - Image 53 vs Label 52 slices (sub-042_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-002: Z-dimension differs - Image 66 vs Label 18 slices (sub-002_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-005: Z-dimension differs - Image 53 vs Label 15 slices (sub-005_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-033: Z-dimension differs - Image 61 vs Label 16 slices (sub-033_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-033: Z-dimension differs - Image 61 vs Label 57 slices (sub-033_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-033: Z-dimension differs - Image 61 vs Label 60 slices (sub-033_CT_seg-T-Es_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-033: Z-dimension differs - Image 61 vs Label 32 slices (sub-033_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-034: Z-dimension differs - Image 63 vs Label 37 slices (sub-034_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-034: Z-dimension differs - Image 63 vs Label 53 slices (sub-034_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-050: Z-dimension differs - Image 45 vs Label 9 slices (sub-050_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-050: Z-dimension differs - Image 45 vs Label 27 slices (sub-050_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-050: Z-dimension differs - Image 45 vs Label 39 slices (sub-050_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-050: Z-dimension differs - Image 45 vs Label 41 slices (sub-050_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-035: Z-dimension differs - Image 55 vs Label 29 slices (sub-035_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-035: Z-dimension differs - Image 55 vs Label 16 slices (sub-035_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-032: Z-dimension differs - Image 60 vs Label 16 slices (sub-032_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-032: Z-dimension differs - Image 60 vs Label 34 slices (sub-032_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-032: Z-dimension differs - Image 60 vs Label 54 slices (sub-032_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-004: Z-dimension differs - Image 47 vs Label 12 slices (sub-004_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-003: Z-dimension differs - Image 64 vs Label 21 slices (sub-003_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-047: Z-dimension differs - Image 53 vs Label 51 slices (sub-047_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-047: Z-dimension differs - Image 53 vs Label 51 slices (sub-047_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-047: Z-dimension differs - Image 53 vs Label 13 slices (sub-047_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-047: Z-dimension differs - Image 53 vs Label 45 slices (sub-047_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-047: Z-dimension differs - Image 53 vs Label 49 slices (sub-047_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-047: Z-dimension differs - Image 53 vs Label 30 slices (sub-047_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-047: Z-dimension differs - Image 53 vs Label 50 slices (sub-047_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-040: Z-dimension differs - Image 48 vs Label 27 slices (sub-040_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-040: Z-dimension differs - Image 48 vs Label 9 slices (sub-040_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-049: Z-dimension differs - Image 55 vs Label 51 slices (sub-049_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-049: Z-dimension differs - Image 55 vs Label 13 slices (sub-049_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-049: Z-dimension differs - Image 55 vs Label 49 slices (sub-049_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-049: Z-dimension differs - Image 55 vs Label 31 slices (sub-049_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-025: Z-dimension differs - Image 51 vs Label 12 slices (sub-025_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-022: Z-dimension differs - Image 56 vs Label 16 slices (sub-022_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-014: Z-dimension differs - Image 65 vs Label 17 slices (sub-014_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-013: Z-dimension differs - Image 64 vs Label 16 slices (sub-013_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-048: Z-dimension differs - Image 56 vs Label 31 slices (sub-048_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-048: Z-dimension differs - Image 56 vs Label 52 slices (sub-048_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-048: Z-dimension differs - Image 56 vs Label 15 slices (sub-048_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-041: Z-dimension differs - Image 51 vs Label 16 slices (sub-041_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-041: Z-dimension differs - Image 51 vs Label 33 slices (sub-041_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-046: Z-dimension differs - Image 62 vs Label 42 slices (sub-046_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-046: Z-dimension differs - Image 62 vs Label 21 slices (sub-046_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-046: Z-dimension differs - Image 62 vs Label 58 slices (sub-046_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-046: Z-dimension differs - Image 62 vs Label 58 slices (sub-046_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-046: Z-dimension differs - Image 62 vs Label 59 slices (sub-046_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-046: Z-dimension differs - Image 62 vs Label 57 slices (sub-046_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-046: Z-dimension differs - Image 62 vs Label 59 slices (sub-046_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-012: Z-dimension differs - Image 66 vs Label 13 slices (sub-012_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-015: Z-dimension differs - Image 58 vs Label 12 slices (sub-015_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-023: Z-dimension differs - Image 64 vs Label 11 slices (sub-023_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-024: Z-dimension differs - Image 63 vs Label 16 slices (sub-024_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-039: Z-dimension differs - Image 52 vs Label 16 slices (sub-039_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-039: Z-dimension differs - Image 52 vs Label 25 slices (sub-039_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-006: Z-dimension differs - Image 55 vs Label 14 slices (sub-006_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-001: Z-dimension differs - Image 58 vs Label 16 slices (sub-001_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-008: Z-dimension differs - Image 58 vs Label 12 slices (sub-008_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-037: Z-dimension differs - Image 57 vs Label 15 slices (sub-037_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-037: Z-dimension differs - Image 57 vs Label 31 slices (sub-037_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-030: Z-dimension differs - Image 62 vs Label 11 slices (sub-030_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-031: Z-dimension differs - Image 54 vs Label 15 slices (sub-031_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-031: Z-dimension differs - Image 54 vs Label 51 slices (sub-031_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-031: Z-dimension differs - Image 54 vs Label 31 slices (sub-031_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-009: Z-dimension differs - Image 67 vs Label 14 slices (sub-009_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-036: Z-dimension differs - Image 68 vs Label 16 slices (sub-036_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-036: Z-dimension differs - Image 68 vs Label 39 slices (sub-036_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-038: Z-dimension differs - Image 64 vs Label 39 slices (sub-038_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-038: Z-dimension differs - Image 64 vs Label 16 slices (sub-038_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+      "sub-007: Z-dimension differs - Image 61 vs Label 13 slices (sub-007_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks"
+    ]
+  },
+  "summary": {
+    "num_subjects": 50,
+    "num_images": 50,
+    "num_labels": 650,
+    "image_shapes": [
+      [
+        512,
+        512,
+        60
+      ],
+      [
+        512,
+        512,
+        51
+      ],
+      [
+        512,
+        512,
+        61
+      ],
+      [
+        512,
+        512,
+        46
+      ],
+      [
+        512,
+        512,
+        66
+      ],
+      [
+        512,
+        512,
+        64
+      ],
+      [
+        512,
+        512,
+        60
+      ],
+      [
+        512,
+        512,
+        52
+      ],
+      [
+        512,
+        512,
+        55
+      ],
+      [
+        512,
+        512,
+        63
+      ],
+      [
+        512,
+        512,
+        60
+      ],
+      [
+        512,
+        512,
+        59
+      ],
+      [
+        512,
+        512,
+        55
+      ],
+      [
+        512,
+        512,
+        56
+      ],
+      [
+        512,
+        512,
+        62
+      ],
+      [
+        512,
+        512,
+        53
+      ],
+      [
+        512,
+        512,
+        66
+      ],
+      [
+        512,
+        512,
+        53
+      ],
+      [
+        512,
+        512,
+        61
+      ],
+      [
+        512,
+        512,
+        63
+      ],
+      [
+        512,
+        512,
+        45
+      ],
+      [
+        512,
+        512,
+        55
+      ],
+      [
+        512,
+        512,
+        60
+      ],
+      [
+        512,
+        512,
+        47
+      ],
+      [
+        512,
+        512,
+        64
+      ],
+      [
+        512,
+        512,
+        53
+      ],
+      [
+        512,
+        512,
+        48
+      ],
+      [
+        512,
+        512,
+        55
+      ],
+      [
+        512,
+        512,
+        51
+      ],
+      [
+        512,
+        512,
+        56
+      ],
+      [
+        512,
+        512,
+        65
+      ],
+      [
+        512,
+        512,
+        64
+      ],
+      [
+        512,
+        512,
+        56
+      ],
+      [
+        512,
+        512,
+        51
+      ],
+      [
+        512,
+        512,
+        62
+      ],
+      [
+        512,
+        512,
+        66
+      ],
+      [
+        512,
+        512,
+        58
+      ],
+      [
+        512,
+        512,
+        64
+      ],
+      [
+        512,
+        512,
+        63
+      ],
+      [
+        512,
+        512,
+        52
+      ],
+      [
+        512,
+        512,
+        55
+      ],
+      [
+        512,
+        512,
+        58
+      ],
+      [
+        512,
+        512,
+        58
+      ],
+      [
+        512,
+        512,
+        57
+      ],
+      [
+        512,
+        512,
+        62
+      ],
+      [
+        512,
+        512,
+        54
+      ],
+      [
+        512,
+        512,
+        67
+      ],
+      [
+        512,
+        512,
+        68
+      ],
+      [
+        512,
+        512,
+        64
+      ],
+      [
+        512,
+        512,
+        61
+      ]
+    ],
+    "spacings": [
+      [
+        "0.86914",
+        "0.86914",
+        "5.0"
+      ],
+      [
+        "0.742188",
+        "0.742188",
+        "5.0"
+      ],
+      [
+        "0.623047",
+        "0.623047",
+        "5.0"
+      ],
+      [
+        "0.925781",
+        "0.925781",
+        "5.0"
+      ],
+      [
+        "0.761719",
+        "0.761719",
+        "5.0"
+      ],
+      [
+        "0.839844",
+        "0.839844",
+        "5.0"
+      ],
+      [
+        "0.703125",
+        "0.703125",
+        "5.0"
+      ],
+      [
+        "0.921875",
+        "0.921875",
+        "5.0"
+      ],
+      [
+        "0.828125",
+        "0.828125",
+        "5.0"
+      ],
+      [
+        "0.742188",
+        "0.742188",
+        "5.0"
+      ],
+      [
+        "0.806641",
+        "0.806641",
+        "5.0"
+      ],
+      [
+        "0.804688",
+        "0.804688",
+        "5.0"
+      ],
+      [
+        "0.703125",
+        "0.703125",
+        "5.0"
+      ],
+      [
+        "0.826172",
+        "0.826172",
+        "5.0"
+      ],
+      [
+        "0.878906",
+        "0.878906",
+        "5.0"
+      ],
+      [
+        "0.882812",
+        "0.882812",
+        "5.0"
+      ],
+      [
+        "0.892578",
+        "0.892578",
+        "5.0"
+      ],
+      [
+        "0.703125",
+        "0.703125",
+        "5.0"
+      ],
+      [
+        "0.791016",
+        "0.791016",
+        "5.0"
+      ],
+      [
+        "0.675781",
+        "0.675781",
+        "5.0"
+      ],
+      [
+        "0.847656",
+        "0.847656",
+        "5.0"
+      ],
+      [
+        "0.664062",
+        "0.664062",
+        "5.0"
+      ],
+      [
+        "0.863281",
+        "0.863281",
+        "5.0"
+      ],
+      [
+        "0.777344",
+        "0.777344",
+        "5.0"
+      ],
+      [
+        "0.859375",
+        "0.859375",
+        "5.0"
+      ],
+      [
+        "0.8125",
+        "0.8125",
+        "5.0"
+      ],
+      [
+        "0.703125",
+        "0.703125",
+        "5.0"
+      ],
+      [
+        "0.763672",
+        "0.763672",
+        "5.0"
+      ],
+      [
+        "0.875",
+        "0.875",
+        "5.0"
+      ],
+      [
+        "0.742188",
+        "0.742188",
+        "5.0"
+      ],
+      [
+        "0.734375",
+        "0.734375",
+        "5.0"
+      ],
+      [
+        "0.755859",
+        "0.755859",
+        "5.0"
+      ],
+      [
+        "0.644531",
+        "0.644531",
+        "5.0"
+      ],
+      [
+        "0.902344",
+        "0.902344",
+        "5.0"
+      ],
+      [
+        "0.964844",
+        "0.964844",
+        "5.0"
+      ],
+      [
+        "0.78125",
+        "0.78125",
+        "5.0"
+      ],
+      [
+        "0.742188",
+        "0.742188",
+        "5.0"
+      ],
+      [
+        "0.820312",
+        "0.820312",
+        "5.0"
+      ],
+      [
+        "0.859375",
+        "0.859375",
+        "5.0"
+      ],
+      [
+        "0.830078",
+        "0.830078",
+        "5.0"
+      ],
+      [
+        "0.861328",
+        "0.861328",
+        "5.0"
+      ],
+      [
+        "0.773438",
+        "0.773438",
+        "5.0"
+      ],
+      [
+        "0.703125",
+        "0.703125",
+        "5.0"
+      ],
+      [
+        "0.742188",
+        "0.742188",
+        "5.0"
+      ],
+      [
+        "0.71875",
+        "0.71875",
+        "5.0"
+      ],
+      [
+        "0.703125",
+        "0.703125",
+        "5.0"
+      ],
+      [
+        "0.703125",
+        "0.703125",
+        "5.0"
+      ],
+      [
+        "0.751953",
+        "0.751953",
+        "5.0"
+      ],
+      [
+        "0.839844",
+        "0.839844",
+        "5.0"
+      ],
+      [
+        "0.695312",
+        "0.695312",
+        "5.0"
+      ]
+    ],
+    "intensity_ranges": [
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4092.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        2968.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4093.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ],
+      [
+        0.0,
+        4095.0
+      ]
+    ],
+    "label_counts": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "common_shape": [
+      512,
+      512,
+      55
+    ],
+    "common_spacing": [
+      "0.703125",
+      "0.703125",
+      "5.0"
+    ],
+    "overall_intensity_range": [
+      0.0,
+      4095.0
+    ]
+  },
+  "all_errors": [],
+  "all_warnings": [
+    "sub-021: Z-dimension differs - Image 60 vs Label 13 slices (sub-021_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-026: Z-dimension differs - Image 51 vs Label 12 slices (sub-026_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-019: Z-dimension differs - Image 61 vs Label 12 slices (sub-019_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-010: Z-dimension differs - Image 46 vs Label 13 slices (sub-010_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-017: Z-dimension differs - Image 66 vs Label 13 slices (sub-017_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-028: Z-dimension differs - Image 64 vs Label 12 slices (sub-028_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-043: Z-dimension differs - Image 60 vs Label 58 slices (sub-043_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-043: Z-dimension differs - Image 60 vs Label 56 slices (sub-043_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-043: Z-dimension differs - Image 60 vs Label 18 slices (sub-043_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-043: Z-dimension differs - Image 60 vs Label 58 slices (sub-043_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-043: Z-dimension differs - Image 60 vs Label 55 slices (sub-043_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-043: Z-dimension differs - Image 60 vs Label 57 slices (sub-043_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-043: Z-dimension differs - Image 60 vs Label 40 slices (sub-043_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-044: Z-dimension differs - Image 52 vs Label 33 slices (sub-044_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-044: Z-dimension differs - Image 52 vs Label 45 slices (sub-044_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-044: Z-dimension differs - Image 52 vs Label 49 slices (sub-044_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-044: Z-dimension differs - Image 52 vs Label 47 slices (sub-044_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-044: Z-dimension differs - Image 52 vs Label 49 slices (sub-044_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-044: Z-dimension differs - Image 52 vs Label 48 slices (sub-044_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-044: Z-dimension differs - Image 52 vs Label 15 slices (sub-044_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-016: Z-dimension differs - Image 55 vs Label 12 slices (sub-016_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-029: Z-dimension differs - Image 63 vs Label 16 slices (sub-029_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-011: Z-dimension differs - Image 60 vs Label 11 slices (sub-011_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-027: Z-dimension differs - Image 59 vs Label 12 slices (sub-027_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-018: Z-dimension differs - Image 55 vs Label 16 slices (sub-018_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-020: Z-dimension differs - Image 56 vs Label 12 slices (sub-020_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-045: Z-dimension differs - Image 62 vs Label 59 slices (sub-045_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-045: Z-dimension differs - Image 62 vs Label 57 slices (sub-045_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-045: Z-dimension differs - Image 62 vs Label 15 slices (sub-045_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-045: Z-dimension differs - Image 62 vs Label 36 slices (sub-045_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-045: Z-dimension differs - Image 62 vs Label 55 slices (sub-045_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-045: Z-dimension differs - Image 62 vs Label 59 slices (sub-045_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-042: Z-dimension differs - Image 53 vs Label 14 slices (sub-042_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-042: Z-dimension differs - Image 53 vs Label 32 slices (sub-042_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-042: Z-dimension differs - Image 53 vs Label 51 slices (sub-042_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-042: Z-dimension differs - Image 53 vs Label 50 slices (sub-042_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-042: Z-dimension differs - Image 53 vs Label 52 slices (sub-042_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-002: Z-dimension differs - Image 66 vs Label 18 slices (sub-002_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-005: Z-dimension differs - Image 53 vs Label 15 slices (sub-005_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-033: Z-dimension differs - Image 61 vs Label 16 slices (sub-033_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-033: Z-dimension differs - Image 61 vs Label 57 slices (sub-033_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-033: Z-dimension differs - Image 61 vs Label 60 slices (sub-033_CT_seg-T-Es_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-033: Z-dimension differs - Image 61 vs Label 32 slices (sub-033_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-034: Z-dimension differs - Image 63 vs Label 37 slices (sub-034_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-034: Z-dimension differs - Image 63 vs Label 53 slices (sub-034_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-050: Z-dimension differs - Image 45 vs Label 9 slices (sub-050_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-050: Z-dimension differs - Image 45 vs Label 27 slices (sub-050_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-050: Z-dimension differs - Image 45 vs Label 39 slices (sub-050_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-050: Z-dimension differs - Image 45 vs Label 42 slices (sub-050_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-050: Z-dimension differs - Image 45 vs Label 41 slices (sub-050_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-035: Z-dimension differs - Image 55 vs Label 29 slices (sub-035_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-035: Z-dimension differs - Image 55 vs Label 16 slices (sub-035_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-032: Z-dimension differs - Image 60 vs Label 16 slices (sub-032_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-032: Z-dimension differs - Image 60 vs Label 34 slices (sub-032_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-032: Z-dimension differs - Image 60 vs Label 54 slices (sub-032_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-004: Z-dimension differs - Image 47 vs Label 12 slices (sub-004_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-003: Z-dimension differs - Image 64 vs Label 21 slices (sub-003_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-047: Z-dimension differs - Image 53 vs Label 51 slices (sub-047_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-047: Z-dimension differs - Image 53 vs Label 51 slices (sub-047_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-047: Z-dimension differs - Image 53 vs Label 13 slices (sub-047_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-047: Z-dimension differs - Image 53 vs Label 45 slices (sub-047_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-047: Z-dimension differs - Image 53 vs Label 49 slices (sub-047_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-047: Z-dimension differs - Image 53 vs Label 30 slices (sub-047_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-047: Z-dimension differs - Image 53 vs Label 50 slices (sub-047_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-040: Z-dimension differs - Image 48 vs Label 27 slices (sub-040_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-040: Z-dimension differs - Image 48 vs Label 9 slices (sub-040_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-049: Z-dimension differs - Image 55 vs Label 51 slices (sub-049_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-049: Z-dimension differs - Image 55 vs Label 13 slices (sub-049_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-049: Z-dimension differs - Image 55 vs Label 52 slices (sub-049_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-049: Z-dimension differs - Image 55 vs Label 49 slices (sub-049_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-049: Z-dimension differs - Image 55 vs Label 31 slices (sub-049_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-025: Z-dimension differs - Image 51 vs Label 12 slices (sub-025_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-022: Z-dimension differs - Image 56 vs Label 16 slices (sub-022_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-014: Z-dimension differs - Image 65 vs Label 17 slices (sub-014_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-013: Z-dimension differs - Image 64 vs Label 16 slices (sub-013_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-048: Z-dimension differs - Image 56 vs Label 31 slices (sub-048_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-048: Z-dimension differs - Image 56 vs Label 52 slices (sub-048_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-048: Z-dimension differs - Image 56 vs Label 53 slices (sub-048_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-048: Z-dimension differs - Image 56 vs Label 15 slices (sub-048_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-041: Z-dimension differs - Image 51 vs Label 16 slices (sub-041_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-041: Z-dimension differs - Image 51 vs Label 33 slices (sub-041_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-046: Z-dimension differs - Image 62 vs Label 42 slices (sub-046_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-046: Z-dimension differs - Image 62 vs Label 21 slices (sub-046_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-046: Z-dimension differs - Image 62 vs Label 58 slices (sub-046_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-046: Z-dimension differs - Image 62 vs Label 58 slices (sub-046_CT_seg-LLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-046: Z-dimension differs - Image 62 vs Label 59 slices (sub-046_CT_seg-RS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-046: Z-dimension differs - Image 62 vs Label 57 slices (sub-046_CT_seg-T-VS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-046: Z-dimension differs - Image 62 vs Label 59 slices (sub-046_CT_seg-RLg_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-012: Z-dimension differs - Image 66 vs Label 13 slices (sub-012_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-015: Z-dimension differs - Image 58 vs Label 12 slices (sub-015_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-023: Z-dimension differs - Image 64 vs Label 11 slices (sub-023_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-024: Z-dimension differs - Image 63 vs Label 16 slices (sub-024_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-039: Z-dimension differs - Image 52 vs Label 16 slices (sub-039_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-039: Z-dimension differs - Image 52 vs Label 25 slices (sub-039_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-006: Z-dimension differs - Image 55 vs Label 14 slices (sub-006_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-001: Z-dimension differs - Image 58 vs Label 16 slices (sub-001_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-008: Z-dimension differs - Image 58 vs Label 12 slices (sub-008_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-037: Z-dimension differs - Image 57 vs Label 15 slices (sub-037_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-037: Z-dimension differs - Image 57 vs Label 31 slices (sub-037_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-030: Z-dimension differs - Image 62 vs Label 11 slices (sub-030_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-031: Z-dimension differs - Image 54 vs Label 15 slices (sub-031_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-031: Z-dimension differs - Image 54 vs Label 51 slices (sub-031_CT_seg-T-AS_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-031: Z-dimension differs - Image 54 vs Label 31 slices (sub-031_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-009: Z-dimension differs - Image 67 vs Label 14 slices (sub-009_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-036: Z-dimension differs - Image 68 vs Label 16 slices (sub-036_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-036: Z-dimension differs - Image 68 vs Label 39 slices (sub-036_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-038: Z-dimension differs - Image 64 vs Label 39 slices (sub-038_CT_seg-PC_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-038: Z-dimension differs - Image 64 vs Label 16 slices (sub-038_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks",
+    "sub-007: Z-dimension differs - Image 61 vs Label 13 slices (sub-007_CT_seg-Stmch_mask.nii.gz) - This is normal for organ-specific masks"
+  ],
+  "num_errors": 0,
+  "num_warnings": 118
+}

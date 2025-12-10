@@ -1,0 +1,77 @@
+# Cloud Inference Configuration for MedAI
+# ========================================
+#
+# This file configures cloud-based inference using Modal Labs.
+# Modal provides serverless GPU computing for fast ML inference.
+#
+# Setup Instructions:
+# 1. Install Modal: pip install modal
+# 2. Authenticate: modal token new
+# 3. Deploy: modal deploy src/cloud/modal_inference.py
+#
+# Free Tier: Modal provides $30/month in free credits
+# Estimated usage: ~100-200 inference runs per month
+
+cloud:
+  # Enable/disable cloud inference globally
+  enabled: true
+  
+  # Primary cloud provider
+  # Options: modal (currently only Modal is supported)
+  provider: modal
+  
+  # Maximum time to wait for cloud inference (seconds)
+  timeout: 300
+  
+  # Automatically fall back to local inference if cloud fails
+  fallback_to_local: true
+  
+  # Minimum file size (bytes) to prefer cloud over local
+  # Files smaller than this may be faster to process locally
+  min_file_size_for_cloud: 10485760  # 10MB
+
+modal:
+  # Modal application name (used for deployment)
+  app_name: medai-inference
+  
+  # GPU type for inference
+  # Options: T4 (default, ~$0.20/hr), A10G (~$0.60/hr), A100 (~$2.00/hr)
+  # T4 is recommended for cost-effectiveness
+  gpu: T4
+  
+  # Memory allocation (MB)
+  # 16GB recommended for SwinUNETR models
+  memory: 16384
+  
+  # Container image settings
+  image:
+    python_version: "3.10"
+    
+  # Volume name for storing model weights
+  # Models are cached here for faster subsequent inference
+  volume_name: medai-models
+  
+  # Function timeout (seconds)
+  function_timeout: 600
+
+inference:
+  # Default inference parameters
+  defaults:
+    # Sliding window overlap (higher = more accurate, slower)
+    overlap: 0.5
+    
+    # Sliding window batch size (lower = less memory, slower)
+    sw_batch_size: 2
+  
+  # Automatic mode selection threshold (MB)
+  # When in "auto" mode, images larger than this use cloud
+  auto_mode_threshold_mb: 100
+
+logging:
+  # Log cloud inference timing and statistics
+  enable_timing_logs: true
+  
+  # Log detailed error information
+  verbose_errors: true
+
+

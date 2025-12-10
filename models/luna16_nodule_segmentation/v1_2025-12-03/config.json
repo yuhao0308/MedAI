@@ -1,0 +1,54 @@
+{
+    "paths": {
+      "bids_root": "/kaggle/input/luna16-processed/luna16_processed",
+      "output_dir": "/kaggle/working"
+    },
+    "model": {
+      "type": "SwinUNETR",
+      "in_channels": 1,
+      "out_channels": 2,
+      "img_size": [
+        96,
+        96,
+        96
+      ],
+      "feature_size": 48,
+      "use_checkpoint": true
+    },
+    "training": {
+      "spatial_size": [
+        96,
+        96,
+        96
+      ],
+      "batch_size": 1,
+      "num_epochs": 100,
+      "learning_rate": 0.0001,
+      "num_workers": 2,
+      "cache_rate": 0.5,
+      "val_interval": 2,
+      "split": {
+        "train_ratio": 0.7,
+        "val_ratio": 0.15,
+        "test_ratio": 0.15,
+        "random_seed": 42
+      }
+    },
+    "preprocessing": {
+      "spacing": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "orientation": "RAS",
+      "intensity_range": [
+        -1000.0,
+        400.0
+      ],
+      "target_range": [
+        0.0,
+        1.0
+      ],
+      "divisible_k": 32
+    }
+  }
