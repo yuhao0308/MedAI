@@ -10,6 +10,7 @@ import os
 import tempfile
 import shutil
 import json
+import zipfile
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -321,15 +322,17 @@ def render_import_tab():
     
     import_type = st.radio(
         "Data Source",
-        ["Upload Files", "Local Directory", "LUNA16 Dataset"],
+        ["Upload DICOM", "Upload Dataset (ZIP)", "Local Directory", "LUNA16 Dataset"],
         horizontal=True,
         label_visibility="collapsed"
     )
     
     st.markdown("---")
     
-    if import_type == "Upload Files":
+    if import_type == "Upload DICOM":
         render_upload_section()
+    elif import_type == "Upload Dataset (ZIP)":
+        render_dataset_zip_upload()
     elif import_type == "Local Directory":
         render_directory_section()
     else:
@@ -363,6 +366,220 @@ def render_upload_section():
                         st.balloons()
                 except Exception as e:
                     st.error(f"❌ Error: {str(e)}")
+
+
+def render_dataset_zip_upload():
+    """Upload pre-processed BIDS dataset as ZIP file"""
+    st.markdown("### Upload Processed Dataset (ZIP)")
+    st.caption("Upload a ZIP file containing a pre-processed BIDS dataset with NIfTI images.")
+    
+    # Show expected structure
+    with st.expander("Expected ZIP structure"):
+        st.code("""
+your_dataset.zip
+└── dataset_name/
+    ├── dataset_description.json  (required)
+    ├── participants.tsv          (optional)
+    ├── sub-001/
+    │   └── anat/
+    │       └── sub-001_CT.nii.gz
+    ├── sub-002/
+    │   └── anat/
+    │       └── sub-002_CT.nii.gz
+    └── derivatives/              (optional)
+        └── labels/
+            └── sub-001/
+                └── anat/
+                    └── sub-001_CT_seg-nodule_mask.nii.gz
+        """, language="text")
+    
+    uploaded_zip = st.file_uploader(
+        "Select ZIP file",
+        type=['zip'],
+        accept_multiple_files=False,
+        key="dataset_zip_uploader"
+    )
+    
+    if uploaded_zip:
+        file_size_mb = uploaded_zip.size / (1024 * 1024)
+        st.info(f"📦 {uploaded_zip.name} ({file_size_mb:.1f} MB)")
+        
+        # Option to rename dataset
+        default_name = uploaded_zip.name.replace('.zip', '').replace(' ', '_')
+        dataset_name = st.text_input(
+            "Dataset name (folder name in ./data/)",
+            value=default_name,
+            key="dataset_name_input"
+        )
+        
+        # Validate dataset name
+        if not dataset_name or not dataset_name.replace('_', '').replace('-', '').isalnum():
+            st.warning("Please enter a valid dataset name (letters, numbers, underscores, hyphens)")
+            return
+        
+        output_dir = Path("./data") / dataset_name
+        
+        if output_dir.exists():
+            st.warning(f"⚠️ Dataset '{dataset_name}' already exists. It will be replaced.")
+            overwrite = st.checkbox("Confirm overwrite", key="overwrite_confirm")
+            if not overwrite:
+                return
+        
+        if st.button("📤 Extract and Import Dataset", type="primary", use_container_width=True):
+            extract_dataset_zip(uploaded_zip, output_dir)
+
+
+def extract_dataset_zip(uploaded_zip, output_dir: Path):
+    """Extract and validate uploaded ZIP dataset"""
+    progress_bar = st.progress(0, text="Starting extraction...")
+    status_text = st.empty()
+    
+    try:
+        # Create temp directory for extraction
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            
+            # Step 1: Save uploaded file
+            progress_bar.progress(10, text="Saving uploaded file...")
+            zip_path = temp_path / "uploaded.zip"
+            with open(zip_path, "wb") as f:
+                f.write(uploaded_zip.getbuffer())
+            
+            # Step 2: Extract ZIP
+            progress_bar.progress(30, text="Extracting ZIP file...")
+            extract_dir = temp_path / "extracted"
+            extract_dir.mkdir()
+            
+            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                zip_ref.extractall(extract_dir)
+            
+            # Step 3: Find the dataset root (folder containing dataset_description.json)
+            progress_bar.progress(50, text="Validating dataset structure...")
+            dataset_root = find_bids_root(extract_dir)
+            
+            if dataset_root is None:
+                st.error("❌ Invalid dataset: No `dataset_description.json` found in ZIP")
+                st.info("Make sure your ZIP contains a BIDS-formatted dataset with dataset_description.json")
+                progress_bar.empty()
+                return
+            
+            # Step 4: Validate dataset contents
+            validation_result = validate_bids_dataset(dataset_root)
+            
+            if not validation_result["valid"]:
+                st.error(f"❌ Invalid dataset: {validation_result['error']}")
+                progress_bar.empty()
+                return
+            
+            # Show validation summary
+            status_text.info(
+                f"✅ Valid dataset found: {validation_result['subjects']} subjects, "
+                f"{validation_result['images']} images, {validation_result['masks']} masks"
+            )
+            
+            # Step 5: Move to final location
+            progress_bar.progress(70, text="Moving dataset to data directory...")
+            
+            # Remove existing if overwriting
+            if output_dir.exists():
+                shutil.rmtree(output_dir)
+            
+            # Ensure parent directory exists
+            output_dir.parent.mkdir(parents=True, exist_ok=True)
+            
+            # Move dataset
+            shutil.copytree(dataset_root, output_dir)
+            
+            # Step 6: Verify final location
+            progress_bar.progress(90, text="Verifying installation...")
+            
+            final_check = (output_dir / "dataset_description.json").exists()
+            
+            if final_check:
+                progress_bar.progress(100, text="Complete!")
+                st.success(f"✅ Dataset '{output_dir.name}' imported successfully!")
+                st.balloons()
+                
+                # Show summary
+                st.markdown("### Import Summary")
+                col1, col2, col3 = st.columns(3)
+                col1.metric("Subjects", validation_result['subjects'])
+                col2.metric("Images", validation_result['images'])
+                col3.metric("Masks", validation_result['masks'])
+                
+                st.info("📌 Go to **Browse** or **View** tabs to explore your dataset.")
+            else:
+                st.error("❌ Failed to verify dataset installation")
+                progress_bar.empty()
+                
+    except zipfile.BadZipFile:
+        st.error("❌ Invalid ZIP file. Please upload a valid ZIP archive.")
+        progress_bar.empty()
+    except Exception as e:
+        st.error(f"❌ Error extracting dataset: {str(e)}")
+        progress_bar.empty()
+
+
+def find_bids_root(search_dir: Path) -> Path:
+    """Find the BIDS dataset root directory containing dataset_description.json"""
+    # Check if dataset_description.json is directly in the directory
+    if (search_dir / "dataset_description.json").exists():
+        return search_dir
+    
+    # Search one level deep (common case: zip contains a folder)
+    for item in search_dir.iterdir():
+        if item.is_dir():
+            if (item / "dataset_description.json").exists():
+                return item
+            # Search two levels deep
+            for subitem in item.iterdir():
+                if subitem.is_dir() and (subitem / "dataset_description.json").exists():
+                    return subitem
+    
+    return None
+
+
+def validate_bids_dataset(dataset_root: Path) -> dict:
+    """Validate BIDS dataset structure and return summary"""
+    result = {
+        "valid": False,
+        "error": None,
+        "subjects": 0,
+        "images": 0,
+        "masks": 0
+    }
+    
+    # Check required files
+    if not (dataset_root / "dataset_description.json").exists():
+        result["error"] = "Missing dataset_description.json"
+        return result
+    
+    # Count subjects (directories starting with sub-)
+    subjects = [d for d in dataset_root.iterdir() 
+                if d.is_dir() and d.name.startswith("sub-")]
+    result["subjects"] = len(subjects)
+    
+    if len(subjects) == 0:
+        result["error"] = "No subject directories found (expected sub-XXX folders)"
+        return result
+    
+    # Count images
+    for subject in subjects:
+        anat_dir = subject / "anat"
+        if anat_dir.exists():
+            result["images"] += len(list(anat_dir.glob("*.nii.gz")))
+    
+    if result["images"] == 0:
+        result["error"] = "No NIfTI images found in subject directories"
+        return result
+    
+    # Count masks (optional)
+    labels_dir = dataset_root / "derivatives" / "labels"
+    if labels_dir.exists():
+        result["masks"] = len(list(labels_dir.rglob("*_mask.nii.gz")))
+    
+    result["valid"] = True
+    return result
 
 
 def render_directory_section():
