@@ -39,9 +39,12 @@ def is_modal_available() -> bool:
     if not MODAL_AVAILABLE:
         return False
     try:
-        # Check if token is configured
+        # Check if token is configured via file or environment variables
+        # Modal supports both ~/.modal.toml and env vars (MODAL_TOKEN_ID, MODAL_TOKEN_SECRET)
         modal_config_path = os.path.expanduser("~/.modal.toml")
-        return os.path.exists(modal_config_path)
+        has_config_file = os.path.exists(modal_config_path)
+        has_env_vars = bool(os.environ.get("MODAL_TOKEN_ID") and os.environ.get("MODAL_TOKEN_SECRET"))
+        return has_config_file or has_env_vars
     except Exception:
         return False
 
@@ -396,10 +399,13 @@ class ModalInferenceProvider(CloudInferenceProvider if BASE_CLASSES_AVAILABLE el
             return False
         
         try:
-            # Check if Modal token is configured
+            # Check if Modal token is configured via file or environment variables
             modal_config_path = os.path.expanduser("~/.modal.toml")
-            if not os.path.exists(modal_config_path):
-                logger.warning("Modal token not configured. Run 'modal token new'")
+            has_config_file = os.path.exists(modal_config_path)
+            has_env_vars = bool(os.environ.get("MODAL_TOKEN_ID") and os.environ.get("MODAL_TOKEN_SECRET"))
+            
+            if not has_config_file and not has_env_vars:
+                logger.warning("Modal token not configured. Run 'modal token new' or set MODAL_TOKEN_ID and MODAL_TOKEN_SECRET env vars")
                 return False
             
             # Try to look up the deployed function

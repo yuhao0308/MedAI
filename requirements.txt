@@ -36,8 +36,8 @@ einops>=0.7.0  # Required for SwinUNETR
 # Frontend
 streamlit>=1.28.0
 
-# Cloud Inference (Optional)
-# modal>=0.64.0  # Install separately if using Modal cloud GPU
+# Cloud Inference
+modal>=0.64.0  # Modal Labs serverless GPU (uses MODAL_TOKEN_ID/SECRET env vars)
 
 # Testing (Optional - not needed for deployment)
 # pytest>=7.4.0
