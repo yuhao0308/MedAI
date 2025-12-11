@@ -177,17 +177,27 @@ def render_inference_tab(bids_dir):
     models = list_available_models()
     
     if not models:
-        st.warning("⚠️ No compatible models found. Models must have `config.json` and `best_model.pth`.")
+        st.warning("⚠️ No models found. Models need `config.json` in the models directory.")
+        st.info("💡 For cloud inference, upload your model to Modal using:\n```\npython scripts/upload_model_to_modal.py\n```")
         return
+    
+    def format_model_name(model):
+        """Format model name with cloud indicator"""
+        name = f"{model['name']} ({model['type']})"
+        if model.get('cloud_only'):
+            return f"☁️ {name}"
+        return name
     
     selected_model = st.selectbox(
         "🧠 Select Model",
         models,
-        format_func=lambda x: f"{x['name']} ({x['type']})"
+        format_func=format_model_name
     )
     
-    # Show model info
+    # Show model info and cloud-only warning
     if selected_model:
+        if selected_model.get('cloud_only'):
+            st.info("☁️ This model requires **Cloud GPU** (weights are in Modal, not local)")
         with st.expander("📋 Model Information", expanded=False):
             display_model_info(selected_model)
     
@@ -236,16 +246,33 @@ def render_inference_tab(bids_dir):
             overlap = st.select_slider("Overlap", options=[0.25, 0.5, 0.75], value=0.5)
         with col3:
             # Cloud inference toggle
+            is_cloud_only_model = selected_model.get('cloud_only', False)
+            
             if CLOUD_AVAILABLE:
                 cloud_status = get_cloud_status()
-                use_cloud = st.checkbox(
-                    "☁️ Use Cloud GPU",
-                    value=cloud_status.get("cloud_available", False),
-                    disabled=not cloud_status.get("cloud_available", False),
-                    help="Run inference on Modal's serverless GPU for faster processing"
-                )
+                cloud_available = cloud_status.get("cloud_available", False)
+                
+                # Force cloud if model is cloud-only
+                if is_cloud_only_model:
+                    use_cloud = st.checkbox(
+                        "☁️ Use Cloud GPU",
+                        value=True,
+                        disabled=True,  # Can't disable for cloud-only models
+                        help="Required: Model weights are in Modal cloud"
+                    )
+                    if not cloud_available:
+                        st.error("⚠️ Cloud not available but required for this model!")
+                else:
+                    use_cloud = st.checkbox(
+                        "☁️ Use Cloud GPU",
+                        value=cloud_available,
+                        disabled=not cloud_available,
+                        help="Run inference on Modal's serverless GPU for faster processing"
+                    )
             else:
-                use_cloud = False
+                use_cloud = is_cloud_only_model  # Must use cloud for cloud-only models
+                if is_cloud_only_model:
+                    st.error("⚠️ This model requires cloud inference but Modal is not configured")
         
         # Advanced options in expander
         with st.expander("Advanced Options"):
@@ -318,7 +345,10 @@ def render_inference_tab(bids_dir):
 
 def list_available_models() -> List[Dict[str, Any]]:
     """
-    List available trained models by finding directories with config.json and best_model.pth.
+    List available trained models by finding directories with config.json.
+    Models can be:
+    - Local: have both config.json and best_model.pth locally
+    - Cloud-only: have config.json but .pth is in Modal cloud (for Railway deployment)
     Supports nested versioned directories (e.g., model_name/v1_2025-12-03/)
     """
     models_dir = Path("./models")
@@ -332,30 +362,34 @@ def list_available_models() -> List[Dict[str, Any]]:
         """Find all versions of a model"""
         found = []
         
-        # Check if this directory itself is a valid model
-        if (base_dir / "config.json").exists() and (base_dir / "best_model.pth").exists():
+        # Check if this directory itself has a config (model definition)
+        if (base_dir / "config.json").exists():
             config = load_config_safe(base_dir / "config.json")
+            has_local_checkpoint = (base_dir / "best_model.pth").exists()
             found.append({
                 "name": model_name,
                 "path": base_dir,
                 "config_path": base_dir / "config.json",
                 "checkpoint_path": base_dir / "best_model.pth",
                 "type": config.get("model", {}).get("type", "Unknown"),
-                "config": config
+                "config": config,
+                "cloud_only": not has_local_checkpoint  # Mark as cloud-only if no local .pth
             })
         
         # Check subdirectories for versioned models
         for subdir in base_dir.iterdir():
-            if subdir.is_dir() and (subdir / "config.json").exists() and (subdir / "best_model.pth").exists():
+            if subdir.is_dir() and (subdir / "config.json").exists():
                 config = load_config_safe(subdir / "config.json")
                 version_name = f"{model_name}/{subdir.name}"
+                has_local_checkpoint = (subdir / "best_model.pth").exists()
                 found.append({
                     "name": version_name,
                     "path": subdir,
                     "config_path": subdir / "config.json",
                     "checkpoint_path": subdir / "best_model.pth",
                     "type": config.get("model", {}).get("type", "Unknown"),
-                    "config": config
+                    "config": config,
+                    "cloud_only": not has_local_checkpoint
                 })
         
         return found
@@ -381,7 +415,8 @@ def list_available_models() -> List[Dict[str, Any]]:
                 "config_path": config_file,
                 "checkpoint_path": pth_file,
                 "type": config.get("model", {}).get("type", "PyTorch"),
-                "config": config
+                "config": config,
+                "cloud_only": False
             })
     
     return models
