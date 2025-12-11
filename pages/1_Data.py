@@ -405,7 +405,11 @@ your_dataset.zip
         st.info(f"📦 {uploaded_zip.name} ({file_size_mb:.1f} MB)")
         
         # Option to rename dataset
-        default_name = uploaded_zip.name.replace('.zip', '').replace(' ', '_')
+        default_name = uploaded_zip.name.replace('.zip', '').replace(' ', '_').replace('batch', 'luna16').rstrip('12345')
+        # Clean up common patterns like "luna16_batch1" -> "luna16"
+        if '_batch' in default_name:
+            default_name = default_name.split('_batch')[0]
+        
         dataset_name = st.text_input(
             "Dataset name (folder name in ./data/)",
             value=default_name,
@@ -419,17 +423,29 @@ your_dataset.zip
         
         output_dir = Path("./data") / dataset_name
         
+        # Check if dataset exists - offer merge option
+        merge_mode = False
         if output_dir.exists():
-            st.warning(f"⚠️ Dataset '{dataset_name}' already exists. It will be replaced.")
-            overwrite = st.checkbox("Confirm overwrite", key="overwrite_confirm")
-            if not overwrite:
-                return
+            existing_subjects = len([d for d in output_dir.iterdir() if d.is_dir() and d.name.startswith("sub-")])
+            st.info(f"📂 Dataset '{dataset_name}' exists with {existing_subjects} subjects")
+            
+            action = st.radio(
+                "What would you like to do?",
+                ["Merge (add new subjects)", "Replace (delete existing)"],
+                key="merge_or_replace"
+            )
+            merge_mode = action.startswith("Merge")
+            
+            if not merge_mode:
+                if not st.checkbox("Confirm replacement", key="overwrite_confirm"):
+                    return
         
-        if st.button("📤 Extract and Import Dataset", type="primary", use_container_width=True):
-            extract_dataset_zip(uploaded_zip, output_dir)
+        button_text = "📤 Merge into Dataset" if merge_mode else "📤 Extract and Import Dataset"
+        if st.button(button_text, type="primary", use_container_width=True):
+            extract_dataset_zip(uploaded_zip, output_dir, merge=merge_mode)
 
 
-def extract_dataset_zip(uploaded_zip, output_dir: Path):
+def extract_dataset_zip(uploaded_zip, output_dir: Path, merge: bool = False):
     """Extract and validate uploaded ZIP dataset"""
     progress_bar = st.progress(0, text="Starting extraction...")
     status_text = st.empty()
@@ -477,40 +493,58 @@ def extract_dataset_zip(uploaded_zip, output_dir: Path):
                 f"{validation_result['images']} images, {validation_result['masks']} masks"
             )
             
-            # Step 5: Move to final location
-            progress_bar.progress(70, text="Moving dataset to data directory...")
-            
-            # Remove existing if overwriting
-            if output_dir.exists():
-                shutil.rmtree(output_dir)
-            
-            # Ensure parent directory exists
-            output_dir.parent.mkdir(parents=True, exist_ok=True)
-            
-            # Move dataset
-            shutil.copytree(dataset_root, output_dir)
-            
-            # Step 6: Verify final location
-            progress_bar.progress(90, text="Verifying installation...")
-            
-            final_check = (output_dir / "dataset_description.json").exists()
-            
-            if final_check:
+            # Step 5: Move/merge to final location
+            if merge and output_dir.exists():
+                progress_bar.progress(70, text="Merging subjects into existing dataset...")
+                merged_count = merge_dataset(dataset_root, output_dir)
+                
                 progress_bar.progress(100, text="Complete!")
-                st.success(f"✅ Dataset '{output_dir.name}' imported successfully!")
+                
+                # Count final totals
+                final_result = validate_bids_dataset(output_dir)
+                st.success(f"✅ Merged {merged_count} subjects into '{output_dir.name}'!")
                 st.balloons()
                 
-                # Show summary
-                st.markdown("### Import Summary")
+                st.markdown("### Dataset Summary (After Merge)")
                 col1, col2, col3 = st.columns(3)
-                col1.metric("Subjects", validation_result['subjects'])
-                col2.metric("Images", validation_result['images'])
-                col3.metric("Masks", validation_result['masks'])
-                
-                st.info("📌 Go to **Browse** or **View** tabs to explore your dataset.")
+                col1.metric("Total Subjects", final_result['subjects'])
+                col2.metric("Total Images", final_result['images'])
+                col3.metric("Total Masks", final_result['masks'])
             else:
-                st.error("❌ Failed to verify dataset installation")
-                progress_bar.empty()
+                progress_bar.progress(70, text="Moving dataset to data directory...")
+                
+                # Remove existing if overwriting
+                if output_dir.exists():
+                    shutil.rmtree(output_dir)
+                
+                # Ensure parent directory exists
+                output_dir.parent.mkdir(parents=True, exist_ok=True)
+                
+                # Move dataset
+                shutil.copytree(dataset_root, output_dir)
+                
+                # Step 6: Verify final location
+                progress_bar.progress(90, text="Verifying installation...")
+                
+                final_check = (output_dir / "dataset_description.json").exists()
+                
+                if final_check:
+                    progress_bar.progress(100, text="Complete!")
+                    st.success(f"✅ Dataset '{output_dir.name}' imported successfully!")
+                    st.balloons()
+                    
+                    # Show summary
+                    st.markdown("### Import Summary")
+                    col1, col2, col3 = st.columns(3)
+                    col1.metric("Subjects", validation_result['subjects'])
+                    col2.metric("Images", validation_result['images'])
+                    col3.metric("Masks", validation_result['masks'])
+                else:
+                    st.error("❌ Failed to verify dataset installation")
+                    progress_bar.empty()
+                    return
+            
+            st.info("📌 Go to **Browse** or **View** tabs to explore your dataset.")
                 
     except zipfile.BadZipFile:
         st.error("❌ Invalid ZIP file. Please upload a valid ZIP archive.")
@@ -518,6 +552,57 @@ def extract_dataset_zip(uploaded_zip, output_dir: Path):
     except Exception as e:
         st.error(f"❌ Error extracting dataset: {str(e)}")
         progress_bar.empty()
+
+
+def merge_dataset(source_root: Path, target_root: Path) -> int:
+    """Merge subjects from source into target dataset"""
+    merged_count = 0
+    
+    # Copy subject directories
+    for item in source_root.iterdir():
+        if item.is_dir() and item.name.startswith("sub-"):
+            target_subject = target_root / item.name
+            if not target_subject.exists():
+                shutil.copytree(item, target_subject)
+                merged_count += 1
+            else:
+                # Subject exists, merge contents (e.g., new modalities)
+                for subdir in item.iterdir():
+                    target_subdir = target_subject / subdir.name
+                    if subdir.is_dir():
+                        if not target_subdir.exists():
+                            shutil.copytree(subdir, target_subdir)
+                        else:
+                            # Copy individual files
+                            for file in subdir.iterdir():
+                                target_file = target_subdir / file.name
+                                if not target_file.exists():
+                                    shutil.copy2(file, target_file)
+                merged_count += 1
+    
+    # Merge derivatives/labels
+    source_labels = source_root / "derivatives" / "labels"
+    target_labels = target_root / "derivatives" / "labels"
+    
+    if source_labels.exists():
+        target_labels.mkdir(parents=True, exist_ok=True)
+        for item in source_labels.iterdir():
+            if item.is_dir() and item.name.startswith("sub-"):
+                target_subject_labels = target_labels / item.name
+                if not target_subject_labels.exists():
+                    shutil.copytree(item, target_subject_labels)
+                else:
+                    # Merge label files
+                    for subdir in item.iterdir():
+                        target_subdir = target_subject_labels / subdir.name
+                        if subdir.is_dir():
+                            target_subdir.mkdir(parents=True, exist_ok=True)
+                            for file in subdir.iterdir():
+                                target_file = target_subdir / file.name
+                                if not target_file.exists():
+                                    shutil.copy2(file, target_file)
+    
+    return merged_count
 
 
 def find_bids_root(search_dir: Path) -> Path:
